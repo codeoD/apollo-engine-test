@@ -50,8 +50,11 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   mocks: true,
-  introspection: true,
-  playground: true
+  // introspection: true,
+  // playground: true
+  engine: {
+    apiKey: 'service:codeoD-5176:f6p2xSBB14DKEbR6w61BIw'
+  }
 })
 
 server.listen().then(({ url }) => console.log(`Server ready at ${url}`))
