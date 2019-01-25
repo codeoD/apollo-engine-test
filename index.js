@@ -49,7 +49,9 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  mocks: true
+  mocks: true,
+  introspection: true,
+  playground: true
 })
 
 server.listen().then(({ url }) => console.log(`Server ready at ${url}`))
